@@ -5,12 +5,13 @@ echo
 
 git add .
 git commit -m "add"
-git push -u origin master
+#git push -u origin master
+git push origin main
 
 if [ $? -eq 0 ]; then
         echo
-        echo "Ruturn $?, SUCCESS !"
+        echo "Return $?, SUCCESS !"
 else
         echo
-        echo "Ruturn $?, FAIL !"
+        echo "Return $?, FAIL !"
 fi
