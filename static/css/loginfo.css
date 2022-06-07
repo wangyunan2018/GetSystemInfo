@@ -1,0 +1,13 @@
+#logContent{
+    width: 100%;
+    margin-left: 220px;
+}
+
+.logMenu li{
+    font-size: 20px;
+    padding-bottom: 10px;   
+}
+
+.logMenu li a {
+    color: blue;
+}

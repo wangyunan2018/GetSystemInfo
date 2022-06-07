@@ -1,0 +1,101 @@
+├── cmd
+│   ├── cmd.go
+│   └── execBash.go
+├── controller
+│   ├── backend
+│   │   ├── cloudController.go
+│   │   └── logController.go
+│   └── frontend
+│       ├── frontcontroller.go
+│       └── leftMenuController.go
+├── gpuExec.sh
+├── log
+│   ├── 20220530_err.log
+│   ├── 20220530_request.log
+│   ├── 20220531_err.log
+│   ├── 20220531_request.log
+│   ├── 20220601_err.log
+│   ├── 20220601_request.log
+│   ├── 20220602_request.log
+│   ├── 20220606_request.log
+│   ├── 20220607_err.log
+│   └── 20220607_request.log
+├── main.go
+├── router
+│   ├── backendRouter.go
+│   ├── frontendRouter.go
+│   └── router.go
+├── run.sh
+├── sh
+│   └── getContainerStatus.sh
+├── static
+│   ├── css
+│   │   ├── apiRequest.css
+│   │   ├── container.css
+│   │   ├── containerList.css
+│   │   ├── containerListExitName.css
+│   │   ├── containerListRunName.css
+│   │   ├── cpuinfo.css
+│   │   ├── diskinfo.css
+│   │   ├── errLog.css
+│   │   ├── gpuinfo.css
+│   │   ├── home.css
+│   │   ├── kubernetes.css
+│   │   ├── loginfo.css
+│   │   ├── meminfo.css
+│   │   ├── public.css
+│   │   └── refreshPage.css
+│   └── js
+│       ├── autoFresh.js
+│       └── jquery-1.8.0.min.js
+├── textfile
+│   ├── containerExitName.txt
+│   ├── containerName.txt
+│   ├── cpuTemp.txt
+│   ├── dockerExitDel.txt
+│   ├── dockerExitId.txt
+│   ├── dockerExitLog.txt
+│   ├── dockerExitRes.txt
+│   ├── dockerExitStatus.txt
+│   ├── dockerExitStop.txt
+│   ├── dockerRunDel.txt
+│   ├── dockerRunId.txt
+│   ├── dockerRunLog.txt
+│   ├── dockerRunning.txt
+│   ├── dockerRunRes.txt
+│   ├── dockerRunStop.txt
+│   ├── dockerStatus.txt
+│   ├── ExitName.txt
+│   ├── gpuinfo.txt
+│   ├── gpuPower.txt
+│   └── gpuProcesses.txt
+├── tools
+│   ├── getsysteminfo.go
+│   ├── logErrOut.go
+│   ├── readFile.go
+│   └── timeDate.go
+├── view
+│   ├── ajaxFresh
+│   │   ├── container.html
+│   │   ├── cpuInfo.html
+│   │   ├── diskInfo.html
+│   │   ├── gpuInfo.html
+│   │   ├── kubernetes.html
+│   │   ├── logInfo.html
+│   │   ├── memInfo.html
+│   │   ├── otherInfo.html
+│   │   └── refreshPage.html
+│   ├── cloud
+│   │   ├── containerListExit.html
+│   │   ├── containerListRunning.html
+│   │   ├── containerService.html
+│   │   ├── kubernetesService.html
+│   │   └── podService.html
+│   ├── default
+│   │   └── home.html
+│   └── log
+│       ├── apiRequest.html
+│       ├── containerLog.html
+│       ├── errLog.html
+│       └── podLog.html
+└── \351\241\271\347\233\256\347\233\256\345\275\225\347\273\223\346\236\204.txt

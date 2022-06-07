@@ -1,0 +1,32 @@
+{{define "view/ajaxFresh/container.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/public.css">
+    <link rel="stylesheet" href="/static/css/container.css">
+    <title>{{.title}}</title>
+</head>
+<body>
+    <div id="containerContent">
+        <ul class="containerUl">
+            <li class="li1">
+                <h4>容器列表</h4>
+                <ul>
+                    <li><a href="/cloud/container/listRunning" target="_blank">在线容器</a></li>
+                    <li><a href="/cloud/container/listExit" target="_blank">离线容器</a></li>
+                </ul>
+            </li>
+            <li class="li2">
+                <h4>Docker服务</h4>
+                <ul>
+                    <li><a href="/cloud/container/svc" target="_blank">运行状态</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+{{end}}

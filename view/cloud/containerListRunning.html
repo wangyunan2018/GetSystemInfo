@@ -1,0 +1,52 @@
+{{define "view/cloud/containerListRunning.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/public.css">
+    <link rel="stylesheet" href="/static/css/containerListRunName.css">
+    <title>{{.title}}</title>
+</head>
+<body>
+    <div id="containerListRunContent">
+        <ul class="ul1">
+            {{range $k, $v := .containerRunName}}
+                <li><span>容器名: </span>{{$v}}</li>
+            {{end}}
+        </ul>
+        <ul class="ul1">
+            {{range $k, $v := .containerRunId}}
+                <li><span>ID: </span>{{$v}}</li>
+           {{end}}
+        </ul>
+        <ul class="ul1">
+            {{range $k, $v := .containerStatus}}
+                <li><span>状态: </span>{{$v}}</li>
+            {{end}}
+        </ul>
+        <ul class="ul1">
+            {{range $k, $v := .containerRunRes}}
+                <li><span>{{$v}}</span></li>
+            {{end}}
+        </ul>
+        <ul class="ul1">
+            {{range $k, $v := .containerRunStop}}
+                <li><span>{{$v}}</span></li>
+            {{end}}
+        </ul>
+        <ul class="ul1">
+            {{range $k, $v := .containerRunDel}}
+                <li><span>{{$v}}</span></li>
+            {{end}}
+        </ul>
+        <ul class="ul1">
+            {{range $k, $v := .containerRunLog}}
+                <li><span>{{$v}}</span></li>
+            {{end}}
+        </ul>
+    </div>
+</body>
+</html>
+{{end}}

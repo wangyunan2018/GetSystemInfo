@@ -1,0 +1,15 @@
+#gpuContent{
+    width: 100%;
+    margin-left: 220px;
+    position: relative;
+}
+
+#gpuContent ul li {
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: red;
+}
+
+.cpuTitle {
+    padding-bottom: 20px;
+}

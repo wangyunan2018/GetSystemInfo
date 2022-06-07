@@ -1,0 +1,22 @@
+{{define "view/log/apiRequest.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/public.css">
+    <link rel="stylesheet" href="/static/css/apiRequest.css">
+    <title>{{.title}}</title>
+</head>
+<body>
+    <div id="requestContent">
+        <ul class="resUl">
+            {{range $k, $v := .httpRequest}}
+                <li>{{$v}}</li>
+            {{end}}
+        </ul>
+    </div>
+</body>
+</html>
+{{end}}

@@ -1,0 +1,12 @@
+.ul1{
+    float: left;
+}
+
+.ul1 li{
+    color: blue;
+    font-size: 20px;
+}
+
+.ul1{
+    margin-right: 20px;
+}

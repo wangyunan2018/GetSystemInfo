@@ -1,0 +1,18 @@
+.inpt1, .inpt2 {
+    position: absolute;
+    width:50px;
+    height:20px;
+    line-height: 20px;
+    color: blue;
+    font-weight:bold;
+    top:1px;
+}
+
+.inpt1 {
+    left: 160px;
+    
+}
+
+.inpt2 {
+    left: 240px; 
+}

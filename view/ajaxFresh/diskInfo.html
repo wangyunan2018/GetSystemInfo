@@ -1,0 +1,35 @@
+{{define "view/ajaxFresh/diskInfo.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/diskinfo.css">
+    <link rel="stylesheet" href="static/css/public.css">
+    <link rel="stylesheet" href="static/css/refreshPage.css">
+    <title>{{.title}}</title>
+</head>
+<body>
+    <div id="diskContent">
+        <!-- 引入公共模板 刷新/返回按钮-->
+        {{template "view/ajaxFresh/refreshPage.html"}}
+        <h3 class="cpuTitle">磁盘利用率</h3>
+        <ul>
+            <li>磁盘总量：{{.diskTotal}} MB</li>
+            <li>使用占比：{{.diskPercentage}}%</li>
+            <li>磁盘剩余：{{.diskFree}} MB</li><br>
+        </ul>
+    </div>
+    <script>
+        function loadPage() {
+            location.replace("/diskinfo")
+        }
+    
+        function returnHome() {
+            location.replace("/")
+        }
+    </script>
+</body>
+</html>
+{{end}}

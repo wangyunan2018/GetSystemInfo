@@ -1,0 +1,15 @@
+#leftContent{
+    width: 100%;
+    margin-left: 220px;
+    position: relative;
+}
+
+#leftContent ul li {
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: red;
+}
+
+#leftContent .cpuTitle {
+    padding-bottom: 20px;
+}

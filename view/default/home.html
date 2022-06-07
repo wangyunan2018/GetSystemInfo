@@ -1,0 +1,86 @@
+{{ define "view/default/home.html" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="static/css/public.css">
+    <script src="static/js/jquery-1.8.0.min.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h2>{{ .title }}</h2>
+        </div>
+        <div id="left_menu">
+            <ul class="leftList">
+                <li class="current" data-id="diskInfo">硬盘</li>
+                <li data-id="memInfo">内存</li>
+                <li data-id="cpuInfo">CPU</li>
+                <li data-id="gpuInfo">GPU</li>
+                <li data-id="container">容器</li>
+                <li data-id="k8s">k8s</li>
+                <li data-id="logInfo">日志</li>
+            </ul>
+        </div>
+        <div id="content"></div>
+    </div>
+    <script>
+        // 点击左侧菜单右边区域展示内容
+        $(function() {
+            $(".leftList").on("click", "li", function() {
+                var sId = $(this).data("id")    //获取data-id的值
+                window.location.hash = sId  //设置锚点
+                loadInner(sId)
+            })
+
+            function loadInner(sId) {
+                var sId = window.location.hash
+                var htmlPath, i
+                switch (sId) {
+                    case "#diskInfo":
+                        htmlPath = "/diskinfo"
+                        i = 0
+                        break;
+                    case "#memInfo":
+                        htmlPath = "/meminfo"
+                        i = 1
+                        break
+                    case "#cpuInfo":
+                        htmlPath = "/cpuinfo"
+                        i = 2
+                        break
+                    case "#gpuInfo":
+                        htmlPath = "/gpuinfo"
+                        i = 3
+                        break
+                    case "#container":
+                        htmlPath = "/container"
+                        i = 4
+                        break
+                    case "#k8s":
+                        htmlPath = "/kubernetes"
+                        i = 5
+                        break
+                    case "#logInfo":
+                        htmlPath = "/loginfo"
+                        i = 6
+                        break
+                    default:
+                        htmlPath = "/diskinfo"
+                        i = 0
+                        break;
+                }
+                $("#content").load(htmlPath) //加载相对应的内容
+                $(".leftList li").eq(i).addClass(".current").siblings().removeClass("current"); //当前列表高亮
+            }
+            var sId = window.location.hash
+            loadInner(sId)
+        })
+    </script>
+</body>
+</html>
+{{ end }}

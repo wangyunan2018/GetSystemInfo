@@ -1,0 +1,37 @@
+#header,#left_menu {
+    background-color: #f5f2f5;
+}
+
+#header {
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.leftList {
+    width: 150px;
+    height: 100%;
+    border-top: solid silver 2px;
+    padding-bottom:10px;
+}
+
+#left_menu ul li {
+    height: 64px;
+    line-height: 64px;
+    text-align:center;
+    padding-top:10px;
+    font-weight:bold;
+    font-size: 20px;
+    border-bottom: solid silver 2px;
+    color: blue;
+    border-right: solid silver 2px;
+}
+
+#left_menu ul li:hover {
+    background-color: #f5eccb;
+}
+
+#left_menu  .leftList{
+    float: left;
+}

@@ -1,0 +1,43 @@
+{{define "view/ajaxFresh/cpuInfo.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/cpuinfo.css" />
+    <link rel="stylesheet" href="static/css/public.css">
+    <link rel="stylesheet" href="static/css/refreshPage.css">
+    <title>{{.title}}</title>
+</head>
+<body>
+    <div id="leftContent">
+        <!-- 引入公共模板 刷新/返回按钮-->
+        {{template "view/ajaxFresh/refreshPage.html"}}
+        <h3 class="cpuTitle">CPU利用率</h3>
+        <ul>
+            {{range $k, $v := .cpuFree}}
+            <li>CPU<span>{{$k}}</span>: <span>{{$v}}</span>%</li>
+            {{end}}
+            <li>cpu核心数：{{.cpuCores}}</li>
+        </ul>
+
+        <h3 class="cpuTitle">CPU温度</h3>
+        <ul>
+            {{range $v := .cpuTemp}}
+                <li><span>{{$v}}</span></li>
+            {{end}}
+        </ul>
+    </div>
+    <script>
+        function loadPage() {
+            location.replace("/cpuinfo")
+        }
+    
+        function returnHome() {
+            location.replace("/")
+        }
+    </script>
+</body>
+</html>
+{{end}}

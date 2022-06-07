@@ -1,0 +1,35 @@
+{{define "view/ajaxFresh/memInfo.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/meminfo.css">
+    <link rel="stylesheet" href="static/css/public.css">
+    <link rel="stylesheet" href="static/css/refreshPage.css">
+    <title>{{.title}}</title>
+</head>
+<body>
+    <div id="memContent">
+        <!-- 引入公共模板 刷新/返回按钮-->
+        {{template "view/ajaxFresh/refreshPage.html"}}
+        <h3 class="cpuTitle">内存利用率</h3>
+        <ul>
+            <li>内存总量：{{.memTotal}} MB</li>
+            <li>使用占比：{{.memPercent}}%</li>
+            <li>可用内存：{{.memFree}} MB</li>
+        </ul>
+    </div>
+    <script>
+        function loadPage() {
+            location.replace("/meminfo")
+        }
+    
+        function returnHome() {
+            location.replace("/")
+        }
+    </script>
+</body>
+</html>
+{{end}}

@@ -1,0 +1,47 @@
+{{define "view/ajaxFresh/gpuInfo.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/gpuinfo.css">
+    <link rel="stylesheet" href="static/css/public.css">
+    <link rel="stylesheet" href="static/css/refreshPage.css">
+    <title>{{.title}}</title>
+</head>
+<body>
+    <div id="gpuContent">
+        <!-- 引入公共模板 刷新/返回按钮-->
+        {{template "view/ajaxFresh/refreshPage.html"}}
+        <h3 class="cpuTitle">GPU利用率</h3>
+        <ul>
+            <!-- gpuVersion -->
+            <h3>GPU驱动版本：</h3>
+            {{range $k, $v := .gpuVersion}}    
+                <li>{{$v}}</li>
+            {{end}}
+            <!-- gpuPower -->
+            <h3>GPU风扇温度|功率|显存利用率：</h3>
+            {{range $k, $v := .gpuPower}}
+                <li>{{$v}}</li>
+            {{end}}
+            <!-- gpuProcesses -->
+            <h3>GPU进程：</h3>
+            {{range $k, $v := .gpuProcesses}}
+                <li>{{$v}}</li>
+            {{end}}
+        </ul>
+    </div>
+    <script>
+        function loadPage() {
+            location.replace("/gpuinfo")
+        }
+    
+        function returnHome() {
+            location.replace("/")
+        }
+    </script>
+</body>
+</html>
+{{end}}
