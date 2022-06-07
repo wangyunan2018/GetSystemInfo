@@ -1,1 +1,1 @@
-# GetSystemInfo
+golang gin编写的获取服务器硬件信息（硬盘、cpu、gpu、内存、容器、k8s、日志收集）的小型运维系统。
